@@ -1,0 +1,94 @@
+<!-- Credit card form -->
+<section >
+  <div class="row">
+    <div class="col-md-8 mb-4">
+      <div class="card mb-4">
+        <div class="card-header py-3">
+          <h5 class="mb-0">Thông tin điện thoại</h5>
+        </div>
+        <div class="card-body">
+          <form class="ng-pristine ng-valid">
+
+            <!-- thong tin dien thoai -->
+
+             <!-- Text input -->
+            <div class="form-outline mb-4">
+              <label class="form-label" for="form6Example4">Tên điện thoại</label>
+              <input ng-model="name" type="text" id="form6Example4" class="form-control" required>
+            </div>
+
+            <!-- Text input -->
+            <div class="form-outline mb-4">
+              <label class="form-label" for="form6Example3">Giá bán</label>
+              <input ng-model="cost" type="number" id="form6Example3" class="form-control" min="0" step="1" required>
+            </div>
+
+            <!-- Text input -->
+            <div class="form-outline mb-4">
+              <label class="form-label" for="form6Example4">Link ảnh</label>
+              <input ng-model="image" type="text" id="form6Example4" class="form-control" required>
+            </div>
+
+            <!-- Text input -->
+            <div class="form-outline mb-4">
+              <label class="form-label" for="form6Example5">Kích cỡ</label>
+              <input ng-model="size" type="number" id="form6Example5" class="form-control" min="0" step="1" required>
+            </div>
+
+            <!-- Text input -->
+            <div class="form-outline mb-4">
+              <label class="form-label" for="form6Example6">Dung lượng</label>
+              <select class="form-control" id="exampleFormControlSelect1" ng-model="storage">
+                <option value="" selected disabled>Please select</option>
+                <option>32GB</option>
+                <option>64GB</option>
+                <option>128GB</option>
+                <option>256GB</option>
+                <option>512GB</option>
+              </select>
+            </div>
+
+            <!-- Text input -->
+            <div class="form-outline mb-4">
+              <div class="form-group">
+                <label class="form-label" for="form6Example3">Thông số điện thoại</label>
+                <textarea ng-model="details" class="form-control" id="exampleFormControlTextarea1" rows="5" required></textarea>
+              </div>
+            </div>
+
+            <!-- Text input -->
+            <div class="form-outline mb-4">
+              <label class="form-label" for="form6Example6">Giá nhập</label>
+              <input ng-model="gia_nhap" type="number" id="form6Example6" class="form-control" min="0" step="1" required>
+            </div>
+
+            <!-- Text input -->
+            <div class="form-outline mb-4">
+              <label class="form-label" for="form6Example6">Đã bán</label>
+              <input ng-model="da_ban" type="number" id="form6Example6" class="form-control" min="0" step="1"required>
+            </div>
+
+            <!-- Text input -->
+            <div class="form-outline mb-4">
+              <label class="form-label" for="form6Example6">Tồn kho
+              </label>
+              <input ng-model="ton_kho" type="number" id="form6Example6" class="form-control" min="0" step="1" required>
+              
+            </div>
+
+
+            <hr class="my-4">
+
+            
+            <button  class="btn btn-primary btn-lg btn-block" type="button" ng-click="addProduct()">
+              OK
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    
+  </div>
+</section>
+  <!-- Credit card form -->

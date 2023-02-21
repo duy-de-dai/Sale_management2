@@ -1,0 +1,126 @@
+
+<section style="background-color: #eee; ">
+  <div class="container py-5">
+    <div class="row">
+
+      <div class="col-md-12 col-lg-3 mb-4 mb-lg-0 " ng-repeat="dienthoai in productData | filter:tukhoa"
+      ng-init="dienthoai.hienthi=false">
+
+      <!-- xem dữ liệu -->
+      <div class="card text-black mb-3" style="height: 660px" ng-show="!dienthoai.hienthi">
+        <div class="card-body">
+          <div>
+            <img class="card-img-top" style="height: 230px; width: auto" src="{{dienthoai.image}}">
+          </div>
+
+          <div class="text-center mt-3 " style="height: auto;">
+            <h5 class="card-title ng-binding"> {{dienthoai.name}} </h5>
+            <h6 class="text-primary pb-2 ng-binding">Starting at {{dienthoai.cost}}$ </h6>
+          </div>
+
+          <div class="text-center">
+
+            <div class="d-flex flex-column mb-1">
+              <span class="h3 mb-0 ng-binding">{{dienthoai.size}}″</span>
+            </div>
+
+            <div class="p-2 mx-n3 mb-2" style="background-color: #eff1f2;">
+              <span class="h6  ng-binding">{{dienthoai.storage}} GB</span>
+              <span style="color: transparent;">0</span>
+            </div>
+
+            <div class="row">
+              <p class="text-break ng-binding" style="font-size: 0.9rem;">{{dienthoai.details}}</p>
+            </div>
+
+          </div>
+
+          <div class="d-flex flex-row" style="position: absolute; bottom: 10px; width: 84%;" >
+            <button type="button" class="btn btn-primary flex-fill me-1" data-mdb-ripple-color="dark"
+            ng-click="doihienthi(dienthoai)">
+            Edit
+          </button>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- sua du lieu -->
+    <div class="card text-black" ng-show="dienthoai.hienthi">
+      <div class="card-body">
+        <div class="text-center mt-3 " style="height: auto;">
+          <h5 class="card-title ng-binding"> {{dienthoai.name}} </h5>
+          <h6 class="text-primary pb-2 ng-binding">Starting at {{dienthoai.cost}}$ </h6>
+        </div>
+        <div class="text-center mt-2">
+          <textarea rows="4" class="form-control" ng-model="dienthoai.image"></textarea>
+        </div>
+
+
+        <div class="text-center mt-2">
+          <div class="form-group">
+            <input type="text" class="form-control mb-2" placeholder="Product size" ng-model="dienthoai.size">
+          </div>
+
+          <div class="form-group mb-2">
+            <label for="exampleFormControlSelect1">Storage:</label>
+            <select class="form-control" id="exampleFormControlSelect1" ng-model="dienthoai.storage">
+              <option value="" selected disabled>Please select</option>
+              <option>32GB</option>
+              <option>64GB</option>
+              <option>128GB</option>
+              <option>256GB</option>
+              <option>512GB</option>
+            </select>
+
+          </div>
+
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">Details:</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" placeholder="Product details"
+            ng-model="dienthoai.details"></textarea>
+          </div>
+
+        </div>
+
+        <div class="d-flex flex-row mt-4">
+          <button type="button" class="btn btn-primary flex-fill mr-2" 
+          ng-click="luudulieu(dienthoai)">
+          Save
+        </button>
+        <button type="button" class="btn btn-danger flex-fill " ng-click="openModal()">
+          Delete
+        </button>
+
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Modal delete -->
+  <div class="modal fade" id="deleteModal" >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ready to Delete</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Are you sure to delete this phone?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+          <button type="button" class="btn btn-primary"  ng-click="xoadulieu(dienthoai)" >Yes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+</div>
+</section>

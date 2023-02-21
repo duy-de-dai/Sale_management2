@@ -1,0 +1,53 @@
+<div class="row justify-content-center" >
+
+    <div class="col-xl-10 col-lg-12 col-md-9">
+
+        <div class="card o-hidden border-0 shadow-lg my-5">
+            <div class="card-body p-0" >
+                <!-- Nested Row within Card Body -->
+                <div class="row">
+                    <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+                    <div class="col-lg-6">
+                        <div class="p-5">
+                            <div class="text-center">
+                                <i class="fas fa-cog" style="font-size:100px"></i>
+                                <br>
+                                <br>
+                                <h2 class="h4 text-gray-900 mb-4">Welcome Back!</h2>
+                                <p class="text-muted">Đăng nhập để quản trị website</p>
+                            </div>
+                            <form class="user ng-valid-email ng-dirty ng-valid-parse ng-valid ng-valid-required"
+                                style="">
+                                <div class="form-group">
+                                    <input type="email"
+                                        class="form-control form-control-user ng-valid-email ng-not-empty ng-dirty ng-valid ng-valid-required ng-touched"
+                                        id="exampleInputEmail" aria-describedby="emailHelp"
+                                        placeholder="Enter Email Address..." required="" aria-required="true"
+                                        ng-model="nguoidung.username" aria-invalid="false" style="">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password"
+                                        class="form-control form-control-user ng-not-empty ng-dirty ng-valid-parse ng-valid ng-valid-required ng-touched"
+                                        id="exampleInputPassword" placeholder="Password" required=""
+                                        aria-required="true" ng-model="nguoidung.password " aria-invalid="false"
+                                        style="">
+                                </div>
+                                <br>
+                                <button class="btn btn-primary btn-user btn-block" ng-click="dangnhap(nguoidung)">
+                                    Login
+                                </button>
+                            </form>
+                            <hr>
+                            <br>
+                            <br>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
